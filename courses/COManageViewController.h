@@ -1,5 +1,5 @@
 //
-//  COViewController.h
+//  COManageViewController.h
 //  courses
 //
 //  Created by leave on 14-6-26.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface COViewController : UIViewController
+@interface COManageViewController : UIViewController
 
 @end

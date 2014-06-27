@@ -13,4 +13,12 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import "GlobalHeader.h"
+    #import "COTool.h"
+    #import "COCourse.h"
+    #import "UIColor+Hex.h"
+    #import "UIColor+iOS7Colors.h"
+    #import "CODataCenter.h"
+    #import "MBProgressHUD+CommonShow.h"
+    #import "COCourse.h"
 #endif
