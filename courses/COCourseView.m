@@ -17,6 +17,11 @@
     NSArray *nibViews = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:self options:nil];
     COCourseView *view = [nibViews lastObject];
     view.frame = CGRectMake(0, 0, 100, 100);
+    view.layer.shadowColor = [UIColor darkGrayColor].CGColor;
+    view.layer.shadowRadius = 6;
+    view.layer.shadowOffset = CGSizeMake(1, 1.5);
+    view.layer.shadowOpacity = 0.3;
+    view.layer.cornerRadius = 0.8;
     return view;
 }
 

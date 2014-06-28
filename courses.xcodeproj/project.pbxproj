@@ -35,6 +35,8 @@
 		41A05461195C13340016B43E /* COCourseListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A05460195C13340016B43E /* COCourseListCell.m */; };
 		41A05464195C1BA00016B43E /* COColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A05463195C1BA00016B43E /* COColorPickerView.m */; };
 		41A05467195C25CA0016B43E /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A05466195C25CA0016B43E /* UIColor+Hex.m */; };
+		BD8DCBD1195F31590073C305 /* FlipTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8DCBD0195F31590073C305 /* FlipTransition.m */; };
+		BD8DCBD4195F39DB0073C305 /* COViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8DCBD3195F39DB0073C305 /* COViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,10 @@
 		41A05463195C1BA00016B43E /* COColorPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COColorPickerView.m; sourceTree = "<group>"; };
 		41A05465195C25CA0016B43E /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		41A05466195C25CA0016B43E /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		BD8DCBCF195F31590073C305 /* FlipTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipTransition.h; sourceTree = "<group>"; };
+		BD8DCBD0195F31590073C305 /* FlipTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipTransition.m; sourceTree = "<group>"; };
+		BD8DCBD2195F39DB0073C305 /* COViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COViewController.h; sourceTree = "<group>"; };
+		BD8DCBD3195F39DB0073C305 /* COViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +178,8 @@
 				41A0545D195C0F0C0016B43E /* COTool.m */,
 				41A05465195C25CA0016B43E /* UIColor+Hex.h */,
 				41A05466195C25CA0016B43E /* UIColor+Hex.m */,
+				BD8DCBCF195F31590073C305 /* FlipTransition.h */,
+				BD8DCBD0195F31590073C305 /* FlipTransition.m */,
 				41A05458195C0C990016B43E /* modal */,
 				41A05450195C09360016B43E /* view */,
 				41A05421195C07740016B43E /* COAppDelegate.h */,
@@ -183,6 +191,8 @@
 				41A0544B195C09240016B43E /* COManageViewController.m */,
 				41A0544D195C092D0016B43E /* COAddViewController.h */,
 				41A0544E195C092D0016B43E /* COAddViewController.m */,
+				BD8DCBD2195F39DB0073C305 /* COViewController.h */,
+				BD8DCBD3195F39DB0073C305 /* COViewController.m */,
 				41A0542A195C07740016B43E /* Images.xcassets */,
 				411834B7195C5789006ADF56 /* lib */,
 				41A05419195C07740016B43E /* Supporting Files */,
@@ -347,9 +357,11 @@
 			files = (
 				41958184195DBC6C008BA0FF /* COMainPageBack.m in Sources */,
 				411834C3195C6FCE006ADF56 /* MBProgressHUD+CommonShow.m in Sources */,
+				BD8DCBD4195F39DB0073C305 /* COViewController.m in Sources */,
 				41A05449195C09170016B43E /* COMainPageViewController.m in Sources */,
 				41A0544C195C09240016B43E /* COManageViewController.m in Sources */,
 				41A0545B195C0CAA0016B43E /* COCourse.m in Sources */,
+				BD8DCBD1195F31590073C305 /* FlipTransition.m in Sources */,
 				411834BA195C5793006ADF56 /* UIColor+iOS7Colors.m in Sources */,
 				41A0545E195C0F0C0016B43E /* COTool.m in Sources */,
 				41A05423195C07740016B43E /* COAppDelegate.m in Sources */,

@@ -7,13 +7,12 @@
         <!--Main Page View Controller - Courses-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="vXZ-lx-hvc" customClass="COMainPageViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="TSV-D0-NBZ">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="TSV-D0-NBZ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
@@ -47,10 +46,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Courses" id="0Tz-Xq-UEa">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="F2S-TW-kMr"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="067-vI-OcQ">
                             <connections>
-                                <segue destination="HUN-0i-8LT" kind="push" id="KB6-cj-mXW"/>
+                                <segue destination="S1W-hj-k48" kind="modal" identifier="manage" id="0eS-BR-TxY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -59,11 +57,11 @@
                         <outlet property="dateLabelToday" destination="lsq-YU-ZYf" id="M1G-Zf-9G7"/>
                         <outlet property="dateLabelTomorrow" destination="vTz-Pl-CFY" id="RtA-jC-R5b"/>
                         <outlet property="scrollview" destination="TSV-D0-NBZ" id="bDg-8E-R6M"/>
-                        <segue destination="HUN-0i-8LT" kind="push" identifier="managePage" id="Diy-M9-riT"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-32" y="-121"/>
+            <point key="canvasLocation" x="390" y="-121"/>
         </scene>
         <!--Add View Controller - 添加课程-->
         <scene sceneID="5GL-xQ-p7m">
@@ -238,7 +236,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggY-nt-1pV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="946" y="-116"/>
+            <point key="canvasLocation" x="2226" y="-548"/>
         </scene>
         <!--Manage View Controller - 课程管理-->
         <scene sceneID="Il8-jZ-ANn">
@@ -306,20 +304,30 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="课程管理" id="3AF-qS-Gy5">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hih-PD-OW2">
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="vy4-Ou-Qwc"/>
+                        <barButtonItem systemItem="add" id="TC0-A3-1jX">
                             <connections>
-                                <segue destination="f31-OV-IKT" kind="modal" id="VVA-Df-bWt"/>
+                                <segue destination="f31-OV-IKT" kind="modal" id="am8-UE-Ymq"/>
                             </connections>
                         </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="课程管理" id="3AF-qS-Gy5">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="Emo-ol-3E7">
+                            <connections>
+                                <action selector="didTapReturnButton:" destination="HUN-0i-8LT" id="iX7-Xm-mkx"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hih-PD-OW2"/>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableview" destination="gMY-yU-LS3" id="A7Z-s2-jvz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXZ-rW-KN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="364" y="-121"/>
+            <point key="canvasLocation" x="1416" y="-121"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IMQ-Ia-ODd">
@@ -355,7 +363,31 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WTU-kD-daa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="880" y="-121"/>
+            <point key="canvasLocation" x="1856" y="-553"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Lbo-Wi-CgB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="S1W-hj-k48" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="f7d-QI-17Q"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cCx-q2-lCJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Krc-a8-hCJ">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="HUN-0i-8LT" kind="relationship" relationship="rootViewController" id="xh6-4i-kl3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zGf-5s-0yV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="890" y="-121"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -363,7 +395,4 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="KB6-cj-mXW"/>
-    </inferredMetricsTieBreakers>
 </document>

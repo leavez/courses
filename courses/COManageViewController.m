@@ -9,6 +9,7 @@
 #import "COManageViewController.h"
 #import "COCourseListCell.h"
 #import "CODataCenter.h"
+#import "FlipTransition.h"
 
 @interface COManageViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
@@ -17,6 +18,8 @@
 @end
 
 @implementation COManageViewController
+
+
 
 - (void)viewDidLoad
 {
@@ -29,6 +32,11 @@
     [super viewWillAppear:animated];
     self.dataArray = [[CODataCenter sharedInstance] getAllCourses];
     [self.tableview reloadData];
+
+}
+- (IBAction)didTapReturnButton:(id)sender {
+    
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - data source
@@ -46,7 +54,6 @@
     [cell loadData:one];
     return cell;
 }
-#pragma mark - delegate
 
 
 

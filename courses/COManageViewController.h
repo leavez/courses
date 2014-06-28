@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface COManageViewController : UIViewController
+@interface COManageViewController : UIViewController<UIViewControllerTransitioningDelegate>
 
 @end
