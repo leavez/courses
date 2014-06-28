@@ -8,7 +8,6 @@
 
 #import "COCourseView.h"
 @interface COCourseView()
-@property (nonatomic,assign) NSTimeInterval duration;
 @end
 
 @implementation COCourseView
@@ -27,16 +26,14 @@
     
     // set appearance
     CGRect frame = self.frame;
-    frame.size.height = self.duration * kLengthPerSecond;
+    frame.size.height = course.duration * kLengthPerSecond;
     self.frame = frame;
     
     self.backgroundColor = [COTool colorFromKind:self.course.colorKind];
+    
+    self.nameLabel.text = course.name;
+    self.locationLabel.text = course.location;
 }
 
 
-- (NSTimeInterval)duration{
-
-    _duration = [self.course.endTime timeIntervalSinceDate:self.course.startTime];
-    return _duration;
-}
 @end

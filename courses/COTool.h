@@ -13,5 +13,5 @@
 +(UIColor *)darkColorFromKind:(COColor)kind;
 +(NSString *)weekDayFromDate:(NSDate*)date;
 +(NSString *)weekDayFromKind:(COWeekDay)dayKind;
-
++(NSDate *)getMidnightDateOfToday;
 @end

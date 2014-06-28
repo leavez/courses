@@ -11,4 +11,7 @@
 
 @interface COCourseView : UIView
 @property (nonatomic,strong) COCourse *course;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *locationLabel;
++(instancetype)ViewFromNib;
 @end

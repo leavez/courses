@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C09C16B1-0280-4747-B8A2-3D2C37FF70ED</string>
+	<key>IDESourceControlProjectName</key>
+	<string>courses</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2078C201-1BFF-4C60-812E-7E0CFCAD8063</key>
+		<string>https://github.com/leavez/courses.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>courses.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2078C201-1BFF-4C60-812E-7E0CFCAD8063</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/leavez/courses.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2078C201-1BFF-4C60-812E-7E0CFCAD8063</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2078C201-1BFF-4C60-812E-7E0CFCAD8063</string>
+			<key>IDESourceControlWCCName</key>
+			<string>courses</string>
+		</dict>
+	</array>
+</dict>
+</plist>

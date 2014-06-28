@@ -119,4 +119,11 @@
             break;
     }
 }
+
++(NSDate*)getMidnightDateOfToday{
+    NSDate *date = [NSDate date];
+    NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
+    NSUInteger preservedComponents = (NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit);
+    return  [calendar dateFromComponents:[calendar components:preservedComponents fromDate:date]];
+}
 @end

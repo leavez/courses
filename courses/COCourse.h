@@ -12,7 +12,7 @@
 @property (nonatomic,copy) NSString *name;
 @property (nonatomic,copy) NSString *location;
 @property (nonatomic,assign) COWeekDay weekday;
-@property (nonatomic,strong) NSDate *startTime;
-@property (nonatomic,strong) NSDate *endTime;
+@property (nonatomic,assign) NSTimeInterval startTime;
+@property (nonatomic,assign) NSTimeInterval duration;
 @property (nonatomic,assign) COColor colorKind;
 @end

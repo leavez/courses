@@ -37,9 +37,11 @@
     self.title.text = one.name;
     self.location.text = one.location;
     self.weekDay.text = [COTool weekDayFromKind:one.weekday];
+    NSDate *stratDate = [[COTool getMidnightDateOfToday] dateByAddingTimeInterval:one.startTime];
+    NSDate *endDate = [stratDate dateByAddingTimeInterval:one.duration];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"hh:MM"];
-    self.timeLabel.text = [NSString stringWithFormat:@"%@ - %@",[formatter stringFromDate:one.startTime],[formatter stringFromDate:one.endTime]];
+    [formatter setDateFormat:@"HH:MM"];
+    self.timeLabel.text = [NSString stringWithFormat:@"%@ - %@",[formatter stringFromDate:stratDate],[formatter stringFromDate:endDate]];
 }
 
 @end

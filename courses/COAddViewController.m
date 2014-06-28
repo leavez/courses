@@ -71,8 +71,8 @@
     COCourse *course = [[COCourse alloc] init];
     course.name = name;
     course.location = self.locationField.text;
-    course.startTime = startTime;;
-    course.endTime = endTime; // 天的问题
+    course.startTime = [startTime timeIntervalSinceDate:[COTool getMidnightDateOfToday]];
+    course.duration = [endTime timeIntervalSinceDate:startTime];
     course.weekday = self.weekDayPicker.selectedSegmentIndex;
     course.colorKind = [self.colorPicker getSelectedColor];
     
