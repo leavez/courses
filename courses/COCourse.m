@@ -34,4 +34,18 @@
     
 }
 
+-(BOOL)isEqual:(id)object
+{
+    if (![object isKindOfClass:[COCourse class]]) {
+        return NO;
+    }
+    COCourse *another = (COCourse*)object;
+    return  ( [another.name isEqualToString:self.name] &&
+              [another.location isEqualToString:self.location]&&
+              another.startTime == self.startTime &&
+              another.weekday == self.weekday &&
+              another.colorKind == self.colorKind &&
+              another.duration == self.duration);
+}
+
 @end

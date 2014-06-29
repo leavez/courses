@@ -47,6 +47,41 @@ static NSString * const kCourseArrayKeyBase = @"kCourseArrayKeyBase";
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
+-(void)saveDayCoursesArray:(NSMutableArray*)courses weekDay:(COWeekDay)weekday
+{
+    NSString *key = [self keyWithCourse:weekday];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:courses];
+    [[NSUserDefaults standardUserDefaults] setObject:data forKey:key];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void)deleteCourses:(NSArray*)courses;
+{
+    NSMutableArray *coursesOfEveryDayArray = [NSMutableArray array];
+    for (int i =0 ; i<7; i++) {
+        [coursesOfEveryDayArray addObject:[self getCoursesWithWeekday:i]];
+    }
+    for (COCourse *c in courses) {
+        NSMutableArray *dayArray = coursesOfEveryDayArray[c.weekday];
+        for (COCourse *savedCourse in dayArray) {
+            if ([savedCourse isEqual:c]) {
+                [dayArray removeObject:savedCourse];
+                break;
+            }
+        }
+    }
+    
+    // save
+    int index = 0;
+    for (NSMutableArray *dayArray in coursesOfEveryDayArray){
+        NSString *key = [self keyWithCourse:index];
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:dayArray];
+        [[NSUserDefaults standardUserDefaults] setObject:data forKey:key];
+        index ++;
+    }
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 -(NSMutableArray*)getCoursesWithWeekday:(COWeekDay)weekday
 {
     NSString *key = [self keyWithCourse:weekday];
@@ -70,6 +105,10 @@ static NSString * const kCourseArrayKeyBase = @"kCourseArrayKeyBase";
     return array;
 }
 
+-(void)forceSave
+{
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
 
 #pragma mark - tool
 

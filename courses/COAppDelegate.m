@@ -19,6 +19,7 @@
 
 -(void)setGlobalAppearance
 {
+//    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.0f green:0.48f blue:1.f alpha:0.8f]];
     [[UINavigationBar appearance] setBarTintColor:[COTool colorFromKind:COColorBlue]];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]]; // icon color
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];

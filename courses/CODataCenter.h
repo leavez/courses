@@ -17,9 +17,12 @@
 
 +(instancetype)sharedInstance;
 
-- (void)addCourse:(COCourse*)courses;
+- (void)addCourse:(COCourse*)course;
+- (void)deleteCourses:(NSArray*)courses;
 
 - (NSMutableArray*)getCoursesWithWeekday:(COWeekDay)weekday;
 - (NSMutableArray*)getAllCourses;
+
+-(void)forceSave;
 
 @end
