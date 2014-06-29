@@ -46,7 +46,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Courses" id="0Tz-Xq-UEa">
-                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="067-vI-OcQ">
+                        <barButtonItem key="rightBarButtonItem" image="dog.png" id="067-vI-OcQ">
                             <connections>
                                 <segue destination="S1W-hj-k48" kind="modal" identifier="manage" id="0eS-BR-TxY"/>
                             </connections>
@@ -215,12 +215,12 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="添加课程" id="Z5D-iW-Hhk">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="lKz-gi-219">
+                        <barButtonItem key="leftBarButtonItem" image="back.png" id="lKz-gi-219">
                             <connections>
                                 <action selector="didTapBackButton:" destination="lar-6K-5hI" id="bv2-jP-nMU"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="XWb-x4-b2m">
+                        <barButtonItem key="rightBarButtonItem" title="添加" id="XWb-x4-b2m">
                             <connections>
                                 <action selector="didTapFinishButton:" destination="lar-6K-5hI" id="Hil-BB-kLJ"/>
                             </connections>
@@ -329,7 +329,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="课程管理" id="3AF-qS-Gy5">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="Emo-ol-3E7">
+                        <barButtonItem key="leftBarButtonItem" image="back.png" id="Emo-ol-3E7">
                             <connections>
                                 <action selector="didTapReturnButton:" destination="HUN-0i-8LT" id="iX7-Xm-mkx"/>
                             </connections>
@@ -406,6 +406,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             <point key="canvasLocation" x="890" y="-121"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back.png" width="25" height="25"/>
+        <image name="dog.png" width="22" height="22"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -38,6 +38,10 @@
 		BD8DCBD4195F39DB0073C305 /* COViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8DCBD3195F39DB0073C305 /* COViewController.m */; };
 		BD8DCBD7196042150073C305 /* COTimeIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8DCBD6196042150073C305 /* COTimeIndicatorView.m */; };
 		BD8DCBDD19606F830073C305 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8DCBDC19606F830073C305 /* MBProgressHUD.m */; };
+		BD8DCBE4196075290073C305 /* checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD8DCBE3196075290073C305 /* checkmark@2x.png */; };
+		BD8DCBEA196076C90073C305 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD8DCBE9196076C90073C305 /* back@2x.png */; };
+		BD8DCBEC196078420073C305 /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD8DCBEB196078420073C305 /* list@2x.png */; };
+		BD8DCBEE19607B3C0073C305 /* dog@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD8DCBED19607B3C0073C305 /* dog@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +108,10 @@
 		BD8DCBD6196042150073C305 /* COTimeIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COTimeIndicatorView.m; sourceTree = "<group>"; };
 		BD8DCBDB19606F830073C305 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		BD8DCBDC19606F830073C305 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		BD8DCBE3196075290073C305 /* checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark@2x.png"; sourceTree = "<group>"; };
+		BD8DCBE9196076C90073C305 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		BD8DCBEB196078420073C305 /* list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list@2x.png"; sourceTree = "<group>"; };
+		BD8DCBED19607B3C0073C305 /* dog@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dog@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +184,7 @@
 		41A05418195C07740016B43E /* courses */ = {
 			isa = PBXGroup;
 			children = (
+				BD8DCBDE1960744D0073C305 /* images */,
 				41A05455195C0A940016B43E /* GlobalHeader.h */,
 				41A0545C195C0F0C0016B43E /* COTool.h */,
 				41A0545D195C0F0C0016B43E /* COTool.m */,
@@ -261,6 +270,17 @@
 			name = modal;
 			sourceTree = "<group>";
 		};
+		BD8DCBDE1960744D0073C305 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				BD8DCBE3196075290073C305 /* checkmark@2x.png */,
+				BD8DCBEB196078420073C305 /* list@2x.png */,
+				BD8DCBED19607B3C0073C305 /* dog@2x.png */,
+				BD8DCBE9196076C90073C305 /* back@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -340,8 +360,12 @@
 			files = (
 				41A0542B195C07740016B43E /* Images.xcassets in Resources */,
 				41A0541D195C07740016B43E /* InfoPlist.strings in Resources */,
+				BD8DCBEA196076C90073C305 /* back@2x.png in Resources */,
+				BD8DCBEC196078420073C305 /* list@2x.png in Resources */,
 				41A05426195C07740016B43E /* Main.storyboard in Resources */,
 				41A05457195C0ADC0016B43E /* COCourseView.xib in Resources */,
+				BD8DCBEE19607B3C0073C305 /* dog@2x.png in Resources */,
+				BD8DCBE4196075290073C305 /* checkmark@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
