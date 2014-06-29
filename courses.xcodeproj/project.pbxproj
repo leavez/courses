@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		411834BA195C5793006ADF56 /* UIColor+iOS7Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 411834B9195C5793006ADF56 /* UIColor+iOS7Colors.m */; };
 		411834BD195C6608006ADF56 /* CODataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 411834BC195C6608006ADF56 /* CODataCenter.m */; };
-		411834C0195C6F05006ADF56 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 411834BF195C6F05006ADF56 /* MBProgressHUD.m */; };
 		411834C3195C6FCE006ADF56 /* MBProgressHUD+CommonShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 411834C2195C6FCE006ADF56 /* MBProgressHUD+CommonShow.m */; };
 		41958184195DBC6C008BA0FF /* COMainPageBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 41958183195DBC6C008BA0FF /* COMainPageBack.m */; };
 		41A05413195C07740016B43E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A05412195C07740016B43E /* Foundation.framework */; };
@@ -37,6 +36,8 @@
 		41A05467195C25CA0016B43E /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A05466195C25CA0016B43E /* UIColor+Hex.m */; };
 		BD8DCBD1195F31590073C305 /* FlipTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8DCBD0195F31590073C305 /* FlipTransition.m */; };
 		BD8DCBD4195F39DB0073C305 /* COViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8DCBD3195F39DB0073C305 /* COViewController.m */; };
+		BD8DCBD7196042150073C305 /* COTimeIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8DCBD6196042150073C305 /* COTimeIndicatorView.m */; };
+		BD8DCBDD19606F830073C305 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8DCBDC19606F830073C305 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +55,6 @@
 		411834B9195C5793006ADF56 /* UIColor+iOS7Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+iOS7Colors.m"; sourceTree = "<group>"; };
 		411834BB195C6608006ADF56 /* CODataCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CODataCenter.h; sourceTree = "<group>"; };
 		411834BC195C6608006ADF56 /* CODataCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CODataCenter.m; sourceTree = "<group>"; };
-		411834BE195C6F05006ADF56 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		411834BF195C6F05006ADF56 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		411834C1195C6FCE006ADF56 /* MBProgressHUD+CommonShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+CommonShow.h"; sourceTree = "<group>"; };
 		411834C2195C6FCE006ADF56 /* MBProgressHUD+CommonShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+CommonShow.m"; sourceTree = "<group>"; };
 		41958182195DBC6C008BA0FF /* COMainPageBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COMainPageBack.h; sourceTree = "<group>"; };
@@ -101,6 +100,10 @@
 		BD8DCBD0195F31590073C305 /* FlipTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipTransition.m; sourceTree = "<group>"; };
 		BD8DCBD2195F39DB0073C305 /* COViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COViewController.h; sourceTree = "<group>"; };
 		BD8DCBD3195F39DB0073C305 /* COViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COViewController.m; sourceTree = "<group>"; };
+		BD8DCBD5196042150073C305 /* COTimeIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COTimeIndicatorView.h; sourceTree = "<group>"; };
+		BD8DCBD6196042150073C305 /* COTimeIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COTimeIndicatorView.m; sourceTree = "<group>"; };
+		BD8DCBDB19606F830073C305 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		BD8DCBDC19606F830073C305 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +135,8 @@
 			children = (
 				411834C1195C6FCE006ADF56 /* MBProgressHUD+CommonShow.h */,
 				411834C2195C6FCE006ADF56 /* MBProgressHUD+CommonShow.m */,
-				411834BE195C6F05006ADF56 /* MBProgressHUD.h */,
-				411834BF195C6F05006ADF56 /* MBProgressHUD.m */,
+				BD8DCBDB19606F830073C305 /* MBProgressHUD.h */,
+				BD8DCBDC19606F830073C305 /* MBProgressHUD.m */,
 				411834B8195C5793006ADF56 /* UIColor+iOS7Colors.h */,
 				411834B9195C5793006ADF56 /* UIColor+iOS7Colors.m */,
 			);
@@ -241,6 +244,8 @@
 				41A05463195C1BA00016B43E /* COColorPickerView.m */,
 				41958182195DBC6C008BA0FF /* COMainPageBack.h */,
 				41958183195DBC6C008BA0FF /* COMainPageBack.m */,
+				BD8DCBD5196042150073C305 /* COTimeIndicatorView.h */,
+				BD8DCBD6196042150073C305 /* COTimeIndicatorView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -362,17 +367,18 @@
 				41A0544C195C09240016B43E /* COManageViewController.m in Sources */,
 				41A0545B195C0CAA0016B43E /* COCourse.m in Sources */,
 				BD8DCBD1195F31590073C305 /* FlipTransition.m in Sources */,
+				BD8DCBDD19606F830073C305 /* MBProgressHUD.m in Sources */,
 				411834BA195C5793006ADF56 /* UIColor+iOS7Colors.m in Sources */,
 				41A0545E195C0F0C0016B43E /* COTool.m in Sources */,
 				41A05423195C07740016B43E /* COAppDelegate.m in Sources */,
 				411834BD195C6608006ADF56 /* CODataCenter.m in Sources */,
 				41A05453195C094A0016B43E /* COCourseView.m in Sources */,
+				BD8DCBD7196042150073C305 /* COTimeIndicatorView.m in Sources */,
 				41A0541F195C07740016B43E /* main.m in Sources */,
 				41A05461195C13340016B43E /* COCourseListCell.m in Sources */,
 				41A05467195C25CA0016B43E /* UIColor+Hex.m in Sources */,
 				41A05464195C1BA00016B43E /* COColorPickerView.m in Sources */,
 				41A0544F195C092D0016B43E /* COAddViewController.m in Sources */,
-				411834C0195C6F05006ADF56 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

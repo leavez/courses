@@ -26,6 +26,6 @@ typedef enum {
     COWeekDaySunday
 }COWeekDay;
 
-const static float kLengthPerHour = 60;
+const static float kLengthPerHour = 55;
 const static float kLengthPerSecond = kLengthPerHour/3600.f;
 #endif

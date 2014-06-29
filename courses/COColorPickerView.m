@@ -105,7 +105,7 @@
         frame.origin.y = frame.size.height - height;
         frame.size.height = height;
         self.bottomLine = [[UIView alloc] initWithFrame:frame];
-        self.bottomLine.backgroundColor = [UIColor iOS7darkBlueColor];
+        self.bottomLine.backgroundColor = [UIColor iOS7yellowColor];
         self.bottomLine.userInteractionEnabled = NO;
         self.bottomLine.hidden = YES;
         [self addSubview:self.bottomLine];

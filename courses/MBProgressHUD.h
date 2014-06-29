@@ -88,8 +88,6 @@ typedef enum {
 typedef void (^MBProgressHUDCompletionBlock)();
 #endif
 
-#define iOS_7_Above ([[UIDevice currentDevice].systemVersion floatValue]>=7.0)
-
 
 /** 
  * Displays a simple HUD window containing a progress indicator and two optional labels for short messages.
@@ -346,14 +344,9 @@ typedef void (^MBProgressHUDCompletionBlock)();
  */
 @property (assign) float margin;
 
-/**
- * The corner radius for th HUD
- * Defaults to 10.0
- */
-@property (assign) float cornerRadius;
-
 /** 
  * Cover the HUD background view with a radial gradient. 
+ * Enabled by default on iOS 7+, disabled by default on previous versions. 
  */
 @property (assign) BOOL dimBackground;
 
@@ -425,18 +418,6 @@ typedef void (^MBProgressHUDCompletionBlock)();
  * Force the HUD dimensions to be equal if possible. 
  */
 @property (assign, getter = isSquare) BOOL square;
-
-/**
- * Whether using blur background, support iOS7 above only now
- * Default YES, use blur background
- */
-@property (nonatomic,assign) BOOL blur;
-
-/**
- * lightBlur or darkBlur
- * Default NO, add light blur
- */
-@property (nonatomic,assign) BOOL darkBlur;
 
 @end
 
@@ -512,54 +493,3 @@ typedef void (^MBProgressHUDCompletionBlock)();
 @property (nonatomic, MB_STRONG) UIColor *progressColor;
 
 @end
-
-typedef enum {
-    MMBlurUndefined = 0,
-    MMStaticBlur = 1,
-    MMLiveBlur = 2
-} MMBlurType;
-
-@class MMBlurComponents;
-
-@interface MMBlurView : UIView
-
-+ (MMBlurView *) load:(UIView *) view;
-+ (MMBlurView *) loadWithLocation:(CGPoint) point parent:(UIView *) view;
-+ (MMBlurView *) loadWithLocation:(CGPoint) point parent:(UIView *) view frame:(CGRect)frame;
-- (void) unload;
-- (void) blurWithColor:(MMBlurComponents *) components;
-//For realtime animate
-- (void) blurWithColor:(MMBlurComponents *) components updateInterval:(float) interval;
-
-@end
-
-@interface MMBlurComponents : NSObject
-
-@property(nonatomic) CGFloat radius;
-@property(nonatomic, MB_STRONG) UIColor *tintColor;
-@property(nonatomic, assign) CGFloat saturationDeltaFactor;
-@property(nonatomic) UIImage *maskImage;
-
-///Light color effect.
-+ (MMBlurComponents *) lightEffect;
-
-///Dark color effect.
-+ (MMBlurComponents *) darkEffect;
-
-///Coral color effect.
-+ (MMBlurComponents *) coralEffect;
-
-///Neon color effect.
-+ (MMBlurComponents *) neonEffect;
-
-///Sky color effect.
-+ (MMBlurComponents *) skyEffect;
-
-@end
-
-@interface UIImage (ImageEffects)
-
-- (UIImage *)applyBlurWithCrop:(CGRect) bounds resize:(CGSize) size blurRadius:(CGFloat) blurRadius tintColor:(UIColor *) tintColor saturationDeltaFactor:(CGFloat) saturationDeltaFactor maskImage:(UIImage *) maskImage;
-
-@end
-

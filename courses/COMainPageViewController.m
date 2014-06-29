@@ -11,6 +11,7 @@
 #import "COMainPageBack.h"
 #import "COCourseView.h"
 #import "FlipTransition.h"
+#import "COTimeIndicatorView.h"
 
 @interface COMainPageViewController ()<UIViewControllerTransitioningDelegate>
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollview;
@@ -18,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *dateLabelToday;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabelTomorrow;
 @property (nonatomic,strong) NSMutableArray *courseViews;
+@property (nonatomic,strong) COTimeIndicatorView *triangle;
 @end
 
 @implementation COMainPageViewController
@@ -37,7 +39,6 @@
     
     self.courseViews = [NSMutableArray array];
     
-    // custom animation
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -56,7 +57,7 @@
     NSArray *todayCourses = [[CODataCenter sharedInstance] getCoursesWithWeekday:weekday];
     NSArray *tomorrowCourse = [[CODataCenter sharedInstance] getCoursesWithWeekday:((weekday + 1) % 7)];
     
-    CGRect baseFrame = CGRectMake(self.backGridView.todayX, self.backGridView.startY -6*kLengthPerHour, self.backGridView.courseWidth, 0);
+    CGRect baseFrame = CGRectMake(self.backGridView.todayX, self.backGridView.startY -6*kLengthPerHour, self.backGridView.courseWidth-1, 0);
     
     // set up the posistion of course views
     void (^setUpTheFrameBlock)(COCourse *course, CGRect baseFrame) = ^(COCourse *data, CGRect baseFrame){
@@ -65,7 +66,7 @@
         frame.origin.y += (kLengthPerSecond * data.startTime);
         aCourse.frame = frame;
         aCourse.course = data; // 这里会自动设置view的高度
-        [self.scrollview addSubview:aCourse];
+        [self.scrollview insertSubview:aCourse atIndex:1];  // 让后加的在上面
         [self.courseViews addObject:aCourse];
     };
     
@@ -81,6 +82,20 @@
     for (COCourse *data in tomorrowCourse) {
         setUpTheFrameBlock(data,baseFrame);
     }
+    
+    // set up the time indicator triangle
+    if (!self.triangle) {
+        COTimeIndicatorView *triangle = [[COTimeIndicatorView alloc] initWithFrame:CGRectMake(0, 0, 17, 20)];
+        self.triangle = triangle;
+        CGRect frame = self.triangle.frame;
+        frame.origin.x = self.backGridView.todayX - frame.size.width;
+        triangle.frame = frame;
+        [self.scrollview addSubview:triangle];
+    }
+    NSTimeInterval now = [[NSDate date] timeIntervalSinceDate:[COTool getMidnightDateOfToday]];
+    CGRect frame = self.triangle.frame;
+    frame.origin.y = baseFrame.origin.y + now * kLengthPerSecond;
+    self.triangle.frame = frame;
 
 }
 

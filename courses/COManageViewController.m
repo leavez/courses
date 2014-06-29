@@ -31,6 +31,9 @@
         item.tintColor = [COTool colorFromKind:COColorBlue];
     }
     [self.bottomLabelButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+    self.tableview.backgroundColor = [UIColor colorWithRed:0.96 green:0.96 blue:0.95 alpha:1];
+    self.tableview.allowsSelection = NO;
+    self.tableview.tintColor = [COTool colorFromKind:COColorOrange];
 
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -51,6 +54,7 @@
 - (void)setEditing:(BOOL)editing animated:(BOOL)animated
 {
     self.tableview.allowsMultipleSelectionDuringEditing = editing;
+    self.tableview.allowsSelection = editing;
     [super setEditing:editing animated:animated];
     
     [self.tableview setEditing:editing animated:YES];
@@ -98,6 +102,11 @@
     COCourse *one = self.dataArray[indexPath.row];
     [cell loadData:one];
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    return 65;
 }
 
 // Override to support conditional editing of the table view.

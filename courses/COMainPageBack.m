@@ -47,10 +47,10 @@
         self.startX = 40;
     }
     if (!self.tomorrowX) {
-        self.tomorrowX = 190;
+        self.tomorrowX = 182;
     }
     if (!self.todayX){
-        self.todayX = 60;
+        self.todayX = 50;
     }
     self.backgroundColor = [UIColor colorWithRed:0.96 green:0.96 blue:0.95 alpha:1];
 }

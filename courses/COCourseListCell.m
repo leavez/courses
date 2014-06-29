@@ -35,7 +35,11 @@
 - (void)loadData:(COCourse*)one;
 {
     self.title.text = one.name;
-    self.location.text = one.location;
+    if(one.location && ![one.location isEqualToString:@""]){
+        self.location.text = one.location;
+    }else{
+        self.location.text = @"嘻嘻";
+    }
     self.weekDay.text = [COTool weekDayFromKind:one.weekday];
     NSDate *stratDate = [[COTool getMidnightDateOfToday] dateByAddingTimeInterval:one.startTime];
     NSDate *endDate = [stratDate dateByAddingTimeInterval:one.duration];
